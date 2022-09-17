@@ -1,0 +1,73 @@
+<Manager>:
+	Game:
+
+<Game>:
+	btn1: btn1
+	btn2: btn2
+	btn3: btn3
+	btn4: btn4
+	btn5: btn5
+	btn6: btn6
+	btn7: btn7
+	btn8: btn8
+	btn9: btn9
+	GridLayout:
+		cols: 3
+		size_hint: (None, None)
+		pos_hint: {'center_x': .5, 'center_y': .5}
+		size: (690, 690)
+		Button:
+			id: btn1
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 0, 0)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn2
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 0, 1)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn3
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 0, 2)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn4
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 1, 0)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn5
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 1, 1)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn6
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 1, 2)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn7
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 2, 0)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn8
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 2, 1)
+			on_release: root.on_releassed(self)
+		Button:
+			id: btn9
+			text:
+			font_size: 240
+			on_press: root.on_pressed(self, 2, 2)
+			on_release: root.on_releassed(self)
+		
