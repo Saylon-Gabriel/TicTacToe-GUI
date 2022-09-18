@@ -4,8 +4,11 @@ from kivy.properties import ObjectProperty
 
 class Manager(ScreenManager):
 	pass
-
-
+	
+class Menu(Screen):
+	pass
+		
+	
 class Game(Screen):
 	btn1 = ObjectProperty(None)
 	btn2 = ObjectProperty(None)
@@ -23,7 +26,7 @@ class Game(Screen):
 	max_jogadas = 9
 	vencedor = ''
 	win = False
-	
+
 	def on_pressed(self, id, l, c):
 		if self.jogadas < self.max_jogadas and self.quem_joga == 1:
 			self.update(id, l, c, 'X')
@@ -41,6 +44,8 @@ class Game(Screen):
 		self.vencedor = self.winCheck()
 		if self.vencedor == 'X' or self.vencedor == 'O':
 			self.reset()
+		elif self.vencedor == 'n' and self.jogadas == 9:
+			App.get_running_app().stop()
 	def reset(self):
 		self.matriz = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 		self.jogadas = 0
@@ -88,6 +93,7 @@ class Game(Screen):
 				if soma == 3:
 					vit = s
 					break
+		
 				il+=1
 			if vit != 'n':
 				break
